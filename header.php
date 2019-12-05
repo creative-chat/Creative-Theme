@@ -113,7 +113,7 @@
 					    </li>
 						
 						<!-- <li><a href="about.html">About</a></li> -->
-						<!-- <li class="dropdown">
+						<li class="dropdown">
 							<a href="#" class="dropdown-toggle">豪源产品</a>
 							<ul class="dropdown-menu">
 								<li><a href="http://yuan.network/" target="_blank">豪源</a></li>
@@ -121,7 +121,7 @@
 								<li><a href="/?page_id=3153">豪源模板</a></li>
 								<li><a href="/?page_id=2806">豪源Env</a></li>
 							</ul>
-						</li> -->
+						</li>
 						
 					</ul>
 				</div>
