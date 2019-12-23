@@ -1,4 +1,4 @@
-/*--------------------------------------------------------------------------------------------------------------------
+﻿/*--------------------------------------------------------------------------------------------------------------------
  *
  * Template   CleaThin - Clean and Minimal Site Template
  * Version    1.0
@@ -80,16 +80,16 @@
 /*--------------------------------------------------------------------------------------------------------------------
  * Imports
  *--------------------------------------------------------------------------------------------------------------------*/
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,600,500);
-@import '../css/bootstrap.min.css';
-@import '../css/bootstrap-theme.min.css';
-@import '../css/font-awesome.min.css';
-@import '../css/owl.carousel.css';
-@import '../css/owl.theme.css';
-@import '../css/owl.transitions.css';
-@import '../css/magnific-popup.css';
-@import '../css/elegant-icons.css';
-@import '../css/animate.css';
+@import url(../images/2d80e1f18c334c2daba2190721de6404.css);
+@import 'bootstrap.min.css';
+@import 'bootstrap-theme.min.css';
+@import 'font-awesome.min.css';
+@import 'owl.carousel.css';
+@import 'owl.theme.css';
+@import 'owl.transitions.css';
+@import 'magnific-popup.css';
+@import 'elegant-icons.css';
+@import 'animate.css';
 /*--------------------------------------------------------------------------------------------------------------------
  * General Styles
  *--------------------------------------------------------------------------------------------------------------------*/
@@ -573,7 +573,7 @@ p {
   background: #f5f5f5;
 }
 .bg-tuna {
-  background: #32323a url(../img/bg-tuna.jpg);
+  background: #32323a url(../images/bg-tuna.jpg);
 }
 /*
  * Text Colors & Effects

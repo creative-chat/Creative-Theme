@@ -1,5 +1,29 @@
-<?php get_header(); ?>
+﻿<?php get_header(); ?>
 
+<!-- Header -->
+<header id="home" class="header">
+
+<!-- Navigation -->
+<nav id="navigation" class="navbar affix">
+
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-12">
+
+				<?php get_template_part( 'title' ); ?>
+
+                <?php get_template_part( 'menu' ); ?>
+
+			</div>
+		</div>
+
+	</div>
+</nav>
+<!-- /Navigation -->
+
+</header>
+<!-- /Header -->
 <!-- Section: Page Header -->
 <section class="section-page-header">
     <div class="container">
@@ -14,8 +38,7 @@
             <!-- Breadcrumbs -->
             <div class="col-md-8">
                 <ul class="breadcrumb">
-                    <?php if(function_exists('cmp_breadcrumbs')) cmp_breadcrumbs();?>
-                </ul>
+                    <div itemscope itemtype="http://schema.org/WebPage" id="crumbs">位置： <a itemprop="breadcrumb" href="http://www.t.yuan.network">首页</a> » <span class="current">页面</span></div>                </ul>
             </div>
             <!-- /Breadcrumbs -->
 
@@ -35,17 +58,13 @@
                 <!-- Project -->
                 <div class="row">
 
-                    <?php
-                    if(have_posts()) : ?>
-
-                    <div class="seart-result">
-                        <center>
-                            <h2>搜索结果：<?php the_search_query(); ?></h2>
-                        </center>
-                    </div>
-
-                    <?php
-                    while(have_posts()) : the_post(); ?>
+                    <?php if(have_posts()) : ?>
+                        <div class="seart-result">
+                            <center>
+                                <h2>搜索结果：<?php the_search_query(); ?></h2>
+                            </center>
+                        </div>
+                    <?php while(have_posts()) : the_post(); ?>
                             
                         <div class="col-md-4 col-sm-6 fadeIn wow box-foreach1" data-wow-duration="1.3s">
                             <a href="<?php the_permalink(); ?>" class="project-item">
@@ -61,22 +80,18 @@
                                 </div>
                             </a>
                         </div>
-                                 
-
 
                     <?php endwhile; ?>
-
-                    <!-- Pagination -->
-                    <div class="col-md-12">
-                        <center>
-                        <ul class="pagination">
-                            <li>
-                                <?php echo paginate_links(); ?>
-                            </li>
-                        </ul>
-                        </center>
-                    </div>
-                    <!-- /Pagination -->
+                                
+                        <!-- Pagination -->
+                        <div class="col-md-12">
+                            <center>
+                            <ul class="pagination">
+                                <li><?php echo paginate_links(); ?></li>
+                            </ul>
+                            </center>
+                        </div>
+                        <!-- /Pagination -->
 
                     <?php else : ?>
 
@@ -89,20 +104,18 @@
                         </div>
 
                     <?php endif; ?>
-
+                    
                 </div>
                 <!-- /Project -->
 
             </div>
             <!-- /Blog Content -->
 
-            <!-- Blog Sidebar -->
-            <?php get_sidebar(); ?>
-            <!-- /Blog Sidebar -->
+            <?php get_template_part( 'sidebar' ); ?>
 
         </div>
     </div>
 </main>
 <!-- /Main -->
 
-<?php get_footer();
+<?php get_footer(); ?>

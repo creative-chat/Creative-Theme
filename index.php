@@ -1,5 +1,29 @@
-<?php get_header(); ?>
+﻿<?php get_header(); ?>
 
+<!-- Header -->
+<header id="home" class="header">
+
+<!-- Navigation -->
+<nav id="navigation" class="navbar affix">
+
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-12">
+				
+				<?php get_template_part( 'title' ); ?>
+
+				<?php get_template_part( 'menu' ); ?>
+
+			</div>
+		</div>
+
+	</div>
+</nav>
+<!-- /Navigation -->
+
+</header>
+<!-- /Header -->
 <!-- Slider -->
 <div class="slider owl-carousel owl-theme">
 
@@ -21,7 +45,7 @@
 
 				<div class="col-sm-6 col-md-4 col-md-offset-2 height-100p bounceInRight wow" data-wow-duration="1.3s" data-stellar-ratio="0.8">
 					<div class="vertical-middle">
-						<img src="http://www.t.yuan.network/wp-content/uploads/2019/09/hswp.png" class="img-responsive" alt="<?php bloginfo('name'); ?>">
+						<img src="<?php bloginfo('template_directory'); ?>/picture/hswp.png" class="img-responsive" alt="豪源主题">
 					</div>
 				</div>
 
@@ -49,7 +73,7 @@
 
 				<div class="col-sm-6 col-md-4 col-md-offset-2 height-100p bounceInRight wow" data-wow-duration="1.3s" data-stellar-ratio="0.8">
 					<div class="vertical-middle">
-						<img src="http://www.t.yuan.network/wp-content/themes/yuan/images/hsenv.jpg" class="img-responsive" alt="<?php bloginfo('name'); ?>">
+						<img src="<?php bloginfo('template_directory'); ?>/picture/hsenv.jpg" class="img-responsive" alt="豪源主题">
 					</div>
 				</div>
 
@@ -88,7 +112,7 @@
                     <div class="search">
                         <form class="form-inline" method="get" action="<?php bloginfo('url'); ?>/">
                             <div class="form-group">
-                                <input type="text" value="<?php the_search_query(); ?>" name="s" id="s search-index1" placeholder="  搜索的关键字" class="form-control form-control-n">
+                                <input type="text" value="" name="s" id="s search-index1" placeholder="  搜索的关键字" class="form-control form-control-n">
                             </div>
                             <div class="form-group">
                                 <button class="btn btn-n btn-theme" type="submit"><i class="fa fa-fw fa-search"></i></button>
@@ -107,40 +131,37 @@
 		<div class="row mt post-box-index">
 
 			<?php
-			$cats = new WP_Query('post_type=post&cat=&posts_per_page=12');
-			if ($cats->have_posts()) :
-			    while ($cats->have_posts()) : $cats->the_post();?>
-			
-			<div class="col-md-4 col-sm-6 fadeIn wow box-foreach1" data-wow-duration="1.3s">
-				<a href="<?php the_permalink(); ?>" class="project-item">
-					<div class="gallery-image">
-						<?php the_post_thumbnail('product-thumbnails'); ?>
-					</div>
-					<div class="info info-index">
-						<div class="h4 title"><?php the_title(); ?></div>
-						<p class="description"><?php the_time('Y年n月j日, G:i:s'); ?></p>
-						<!-- <div class="social">
-							<p class="description">阅读：10</p>
-						</div> -->
-						<div class="social">
-                            <i class="fa fa-fw fa-eye"></i> 浏览：<?php get_post_views($post -> ID); ?>
-                        </div>
-					</div>
-				</a>
-			</div>
+			$categores = new WP_Query('post_type=post&cat=&posts_per_page=12');
+			if($categores->have_posts()):
+				while($categores->have_posts()) : $categores->the_post(); ?>
 
-			<?php endwhile; ?>
-			
-			<?php 
-			else :
-				echo '<p>No content found</p>';
-			endif; ?>
+				<div class="col-md-4 col-sm-6 fadeIn wow box-foreach1" data-wow-duration="1.3s">
+					<a href="<?php the_permalink(); ?>" class="project-item">
+						<div class="gallery-image">
+							<?php the_post_thumbnail('product-thumbnails'); ?>
+						</div>
+						<div class="info info-index">
+							<div class="h4 title"><?php the_title(); ?></div>
+							<p class="description"><?php the_time('Y年n月j日, G:i:s'); ?></p>
+							<div class="social">
+	                            <i class="fa fa-fw fa-eye"></i> 浏览：<?php get_post_views($post->ID); ?>                   
+	                        </div>
+						</div>
+					</a>
+				</div>
 
+			<?php
+				endwhile;
+			else:
+				// other code
+			endif;
+			?>			
+			
 		</div>
 
 		<div class="col-md-12">
 			<center>
-			<a href="<?php echo get_option('home'); ?>/?page_id=124" class="smooth-scroll btn btn-theme right-n">查看更多</a>
+			<a href="http://www.t.yuan.network/?page_id=124" class="smooth-scroll btn btn-theme right-n">查看更多</a>
 			</center>
 		</div>
 		<!-- /Section content -->
