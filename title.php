@@ -1,4 +1,3 @@
-<!-- Navigation Header -->
 <div class="navbar-header">
 
 	<!-- Toggle Button -->
@@ -32,4 +31,3 @@
 	<!-- /Brand -->
 
 </div>
-<!-- /Navigation Header -->

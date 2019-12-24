@@ -1,3 +1,4 @@
+<!-- Footer -->
 <footer class="footer section-small">
 <div class="container">
 	<div class="row">
@@ -7,12 +8,7 @@
 
 			<!-- Copyright -->
 			<p class="copyright">
-				Copyright &copy; 2018 - 2019. <strong><?php bloginfo('name'); ?></strong>&nbsp;&nbsp;|&nbsp;&nbsp;
-				<a href="http://yuan.network" target="_blank">豪源</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-				<a href="https://www.weibo.com/6331885442" target="_blank">微博</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-				<a href="https://space.bilibili.com/439762135" target="_blank">哔哩哔哩</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-				<a href="https://www.youtube.com/channel/UCeDGMc0AyO_nlLGyfhE2d3w" target="_blank">YouTube</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-				<a href="http://v.qq.com/vplus/d05f550bdbbaeee1b865a967fcf9e3f7" target="_blank">腾讯视频</a>
+				Copyright &copy; 2019. <strong><?php bloginfo('name'); ?></strong>
 			</p>
 			<!-- /Copyright -->
 
@@ -24,7 +20,6 @@
 
 			<!-- Footer Social -->
 			<ul class="social-inline">
-				QQ群：<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=d51f0dd006aef9473ace3ae6855b93661e89a10a79fe27645f068d0fc1754c8e">545997586</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 				version 1.0
 				<!-- <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a></div>
 				<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{},"image":{"viewList":["weixin","tsina","qzone","tqq","renren"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["weixin","tsina","qzone","tqq","renren"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script> -->
@@ -37,7 +32,7 @@
 	</div>
 </div>
 </footer>
-
+<!-- /Footer -->
 
 <!-- Scroll To Top -->
 <div id="scroll-to-top" class="scroll-to-top">

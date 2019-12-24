@@ -1,4 +1,4 @@
-﻿<?php get_header(); ?>
+<?php get_header(); ?>
 
 <!-- Header -->
 <header id="home" class="header">
@@ -10,10 +10,10 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				
-				<?php get_template_part( 'title' ); ?>
+			
+				<?php get_template_part('title'); ?>
 
-				<?php get_template_part( 'menu' ); ?>
+				<?php get_template_part('menu'); ?>
 
 			</div>
 		</div>
@@ -45,7 +45,7 @@
 
 				<div class="col-sm-6 col-md-4 col-md-offset-2 height-100p bounceInRight wow" data-wow-duration="1.3s" data-stellar-ratio="0.8">
 					<div class="vertical-middle">
-						<img src="<?php bloginfo('template_directory'); ?>/picture/hswp.png" class="img-responsive" alt="豪源主题">
+						<img src="<?php bloginfo('template_directory'); ?>/picture/hswp.png" class="img-responsive" alt="<?php bloginfo('name'); ?>">
 					</div>
 				</div>
 
@@ -73,7 +73,7 @@
 
 				<div class="col-sm-6 col-md-4 col-md-offset-2 height-100p bounceInRight wow" data-wow-duration="1.3s" data-stellar-ratio="0.8">
 					<div class="vertical-middle">
-						<img src="<?php bloginfo('template_directory'); ?>/picture/hsenv.jpg" class="img-responsive" alt="豪源主题">
+						<img src="<?php bloginfo('template_directory'); ?>/picture/hsenv.jpg" class="img-responsive" alt="<?php bloginfo('name'); ?>">
 					</div>
 				</div>
 
@@ -110,7 +110,7 @@
                 <div class="widget search-index">
                     
                     <div class="search">
-                        <form class="form-inline" method="get" action="<?php bloginfo('url'); ?>/">
+                        <form class="form-inline" method="get" action="http://www.t.yuan.network/">
                             <div class="form-group">
                                 <input type="text" value="" name="s" id="s search-index1" placeholder="  搜索的关键字" class="form-control form-control-n">
                             </div>
@@ -130,32 +130,47 @@
 		<!-- Section Content -->
 		<div class="row mt post-box-index">
 
-			<?php
-			$categores = new WP_Query('post_type=post&cat=&posts_per_page=12');
-			if($categores->have_posts()):
-				while($categores->have_posts()) : $categores->the_post(); ?>
+			<?php 
+			$categories = new WP_Query('post_type=post&cat=&posts_per_page=12');
+			if($categories->have_posts()):
+				while($categories->have_posts()): $categories->the_post(); ?>
 
-				<div class="col-md-4 col-sm-6 fadeIn wow box-foreach1" data-wow-duration="1.3s">
-					<a href="<?php the_permalink(); ?>" class="project-item">
-						<div class="gallery-image">
-							<?php the_post_thumbnail('product-thumbnails'); ?>
-						</div>
-						<div class="info info-index">
-							<div class="h4 title"><?php the_title(); ?></div>
-							<p class="description"><?php the_time('Y年n月j日, G:i:s'); ?></p>
-							<div class="social">
-	                            <i class="fa fa-fw fa-eye"></i> 浏览：<?php get_post_views($post->ID); ?>                   
-	                        </div>
-						</div>
-					</a>
-				</div>
+					<div class="col-md-4 col-sm-6 fadeIn wow box-foreach1" data-wow-duration="1.3s">
+						<a href="<?php the_permalink(); ?>" class="project-item">
+							<div class="gallery-image">
+								<?php the_post_thumbnail('product-thumbnails'); ?>					
+							</div>
+							<div class="info info-index">
+								<div class="h4 title"><?php the_title(); ?></div>
+								<p class="description"><?php the_time('Y年n月j日, G:i:s'); ?></p>
+								<div class="social">
+		                            <i class="fa fa-fw fa-eye"></i> 浏览：64                        </div>
+							</div>
+						</a>
+					</div>
 
-			<?php
-				endwhile;
-			else:
-				// other code
-			endif;
-			?>			
+				<?php endwhile; 
+			else: ?>
+
+				<h1>不好意思，这里没有文章</h1>
+
+			<?php endif; ?>
+
+						
+			<!-- <div class="col-md-4 col-sm-6 fadeIn wow box-foreach1" data-wow-duration="1.3s">
+				<a href="http://www.t.yuan.network/?p=3519" class="project-item">
+					<div class="gallery-image">
+						<img width="360" height="202" src="<?php bloginfo('template_directory'); ?>/picture/image1-360x202.jpg" class="attachment-product-thumbnails size-product-thumbnails wp-post-image" alt="" />					</div>
+					<div class="info info-index">
+						<div class="h4 title">Java环境配置+快速应用豪源Env</div>
+						<p class="description">2019年10月24日, 0:12:42</p>
+						<div class="social">
+                            <i class="fa fa-fw fa-eye"></i> 浏览：27                        </div>
+					</div>
+				</a>
+			</div> -->
+
+						
 			
 		</div>
 

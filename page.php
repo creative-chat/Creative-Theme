@@ -11,9 +11,9 @@
 		<div class="row">
 			<div class="col-md-12">
 
-				<?php get_template_part( 'title' ); ?>
+				<?php get_template_part('title'); ?>
 
-				<?php get_template_part( 'menu' ); ?>
+				<?php get_template_part('menu'); ?>
 
 			</div>
 		</div>
@@ -31,8 +31,8 @@
             
             <!-- Page Title -->
             <div class="col-md-4">
-                <h1 class="title title-blog-n"><?php the_title(); ?> </h1>
-                <?php bloginfo('name'); ?> <?php the_time('Y年n月j日, G:i:s'); ?> 发布
+                <h1 class="title title-blog-n"><?php the_title(); ?></h1>
+                <?php bloginfo('name'); ?>  <?php the_time('Y年n月j日, G:i:s'); ?> 发布
             </div>
             <!-- /Page Title -->
 
@@ -40,7 +40,7 @@
             <div class="col-md-8">
                 <ul class="breadcrumb">
                     <?php if(function_exists('cmp_breadcrumbs')) cmp_breadcrumbs();?>
-                    <i class="fa fa-fw fa-eye"></i> 浏览：<?php get_post_views($post->ID); ?>
+                    <i class="fa fa-fw fa-eye"></i> 浏览：<?php get_post_views($post -> ID); ?>    
                 </ul>
             </div>
             <!-- /Breadcrumbs -->
@@ -58,19 +58,18 @@
 
             <!-- Post Content -->
             <div class="content-top-10">
+            	             
+	            <?php 
+				if(have_posts()):
+				    while(have_posts()): the_post(); 
 
-            	<?php
-                if(have_posts()) :
-                    while (have_posts()) : the_post(); ?>
-                    
-                    <?php the_content(); ?>
-                    
-                    <?php endwhile;
-                    else :
-                        // echo '<p>No content found</p>';
-                    endif;
-                    
-                ?>
+				        the_content();
+
+				    endwhile;
+				else:
+				    // something can say this is nothing
+				endif;
+				?>
 
             </div>
             <!-- /Post Content -->

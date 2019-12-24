@@ -6,7 +6,7 @@
         
         <h4 class="title">搜索</h4>
         <div class="search">
-            <form class="form-inline" method="get" action="<?php bloginfo('url'); ?>/">
+            <form class="form-inline" method="get" action="<?php bloginfo('url'); ?>">
                 <div class="form-group">
                     <input type="text" value="" name="s" id="s" placeholder="  搜索的关键字" class="form-control form-control-n">
                 </div>
@@ -24,7 +24,11 @@
 
         <h4 class="title">总分类</h4>
         <ul class="sidebar-menu">
-            <li><?php wp_list_cats('sort_column=name&optioncount=0&hierarchical=0'); ?> </li>
+            
+            <li>
+            	<?php wp_list_cats('sort_column=name&optioncount=0&hierarchical=0'); ?>
+			</li>
+
         </ul>
 
     </div>
@@ -32,12 +36,16 @@
 
     <!-- Widget: Latest Posts -->
     <div class="widget">
+
         <h4 class="title">最新内容</h4>
         <ul class="sidebar-menu">
-            <li><?php wp_get_archives('type=postbypost&limit=10'); ?></li>
+            <li>	
+            	<li><?php wp_get_archives('type=postbypost&limit=10'); ?></li>
+			</li>
         </ul>
 
     </div>
     <!-- /Widget: Latest Posts -->
 
-</div>            <!-- /Blog Sidebar -->
+</div>            
+<!-- /Blog Sidebar -->
