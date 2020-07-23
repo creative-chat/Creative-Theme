@@ -1,7 +1,7 @@
 # Ho-Source-Theme
 This is a WordPress Theme made by Ho Source
 
-<h3>Course:</h3>
+# Course
 Udemy:
 <h2><a href="https://ke.qq.com/course/448367?tuin=b26eb164" target="_blank">https://ke.qq.com/course/448367</a></h2>
 
