@@ -1,5 +1,5 @@
-# Ho-Source-Theme
-This is a WordPress Theme made by Ho Source
+# Creative WP Blog Theme
+This is a WordPress Theme made by Creative Source
 
 # Course
 Udemy:
